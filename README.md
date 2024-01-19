@@ -26,6 +26,7 @@ Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned
   - [Accessibility & Responsiveness](#accessibility--responsiveness)
   - [Free to Use](#free-to-use)
 - [How to Use Pomotasker](#how-to-use-pomotasker)
+- [How to use](#how-to-use)
 - [License](#license)
 
 ## Getting Started
