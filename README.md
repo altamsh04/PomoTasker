@@ -17,6 +17,7 @@ Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned
 
 - [Getting Started](#getting-started)
   - [Installation](#installation)
+  - [Technology used](#technology-used)
   - [Usage](#usage)
 - [Features](#features)
   - [25-Minute Timer](#25-minute-timer)
@@ -31,6 +32,11 @@ Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned
 
 ### Installation
 Pomotasker is a web-based tool that can be accessed directly through your web browser. There is no need for installation or downloads.
+
+### Technologies Used
+- HTML
+- CSS
+- JavaScript
 
 ### Usage
 1. Open your web browser and navigate to the [Pomotasker website](#).
