@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PomoTasker - Stay productive!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="stylesheet" href="sprak.css">
+</head>
+
+<body onload="display_todo_list_dynamically()">
+    <script src="script.js"></script>
+    <script src="todo.js"></script>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="assets/favicon.ico" alt="Pomotasker Logo" class="logo">
+                <h3 class="logo-text">Pomotasker</h3>
+            </div>
+            <div class="header-content">
+                <a href="https://github.com/altamsh04/PomoTasker" class="github-link" target="_blank">
+                    <i class="fab fa-github" style="font-size: 20px;"></i> altamsh04/PomoTasker
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper-spark" id="wrapper-spark" style="display: none;">
+        <div id="confetti-wrapper">
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="timer-card">
+                <h2 id="timer-tag" class="timer-tag">25:00</h2>
+                <label style="display: block;" id="laps-container" class="laps-container"
+                    title="Complete this laps to reset!">0 / X</label>
+                <button id="start-btn" class="start-btn" style="background-color: #fff;">Start</button>
+            </div>
+            <div class="task-card">
+                <div class="sub-task-card">
+                    <h3 id="task-container" class="task-container" style="display: none;"></h3>
+                    <button class='delete-todo-button' id="above-delete-todo-button"
+                        style='background-color: white; display: none;'><i
+                            style="background-color: white; padding: 3px;" class="fa-solid fa-trash"></i></button>
+                </div>
+                <button class="button-style" onclick="window.location='#popup-box'"
+                    style="background-color: #ec7063; color: 273036;" title="Add new task"><i style="color: 273036; "
+                        class="plus-circle-icon fas fa-plus-circle"></i> Add Task</button>
+            </div>
+        </div>
+
+        <div class="both-container-fix" style="display: none;">
+            <iframe width="315" height="210" class="youtube-container" style="display: none;" id="youtube-container">
+            </iframe>
+
+            <div class="youtube-buttons-section">
+                <button class='delete-youtube-link' id="delete-youtube-link" style="display: none;" title="Delete"><i
+                        class="fa-solid fa-trash" style="background-color: #fff;"></i></button>
+
+                <button class='random-song-button' id="random-song-button" style="display: none;" title="Play random"><i
+                        class="fa-solid fa-dice" style="background-color: #fff;"></i></button>
+            </div>
+            <div class="todo-container" style="display: none;" id="todo-container">
+                <h3 class="task-container" style="display: block;">Todo's📝</h3>
+                <div class="display-card" id="display-todo-list" style="display: block;">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="popup-box" class="modal">
+        <div class="content">
+            <div class="task-card">
+                <input type="text" class="text-style" id="task" placeholder="What are you working on?">
+                <input type="text" class="text-style" id="youtube-link" placeholder="Add foucs song youtube link.">
+                <div class="est-pomos">
+                    <input type="number" class="text-style" id="laps-count" min="1" max="20" placeholder="Pomos">
+                    <button class="button-style" id="increment-pomos">+</button>
+                    <button class="button-style" id="decrement-pomos">-</button>
+                </div>
+                <div class="todo-container-add">
+                    <input class="text-style" type="text" placeholder="Add todo" id="todo-input">
+                    <button class="button-style" id="add-button"
+                        style="background-color: rgb(236, 112, 99); color: #EBDEF0;" onclick="todo()"
+                        title="Add new todo."><i class="fas fa-plus-circle"></i></button>
+                </div>
+                <div class="todo-added-message" style="display: none;">
+                    <label>Todo added <i class="fa-solid fa-check-circle"></i></label>
+                </div>
+                <button class="button-style" id="add-task-btn">Done</button>
+            </div>
+            <a href="#" class="box-close" title="Close">
+                ×
+            </a>
+        </div>
+    </div>
+
+    <div class="info-containers">
+        <div class="info-content">
+            <h3 class="info-title">What is pomodoro technique?</h3>
+            <p class="info-para">The Pomodoro Technique is a time management method based on 25-minute stretches of
+                focused work broken by five-minute breaks. Longer breaks, typically 15 to 30 minutes, are taken after
+                four consecutive work intervals. Each work interval is called a pomodoro, the Italian word for tomato
+                (plural: pomodori). - <span
+                    onclick="window.location='https://www.techtarget.com/whatis/definition/pomodoro-technique#:~:text=What%20is%20the%20Pomodoro%20Technique,after%20four%20consecutive%20work%20intervals.'"
+                    style="color:  rgb(236, 112, 99); cursor: pointer;"
+                    title="Source - www.techtarget.com">TechTarget.</span></p>
+        </div>
+        <div class="info-content">
+            <h3 class="info-title">What is PomoTasker?</h3>
+            <p class="info-para">Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned time
+                management method developed by Francesco Cirillo. The Pomodoro Technique involves breaking your work
+                into focused intervals, known as "pomodoros," lasting 25 minutes each, followed by a brief 5-minute
+                break. After completing four consecutive pomodoros, a more extended break of 15 to 30 minutes is
+                recommended. <br> In addition to the fundamental principles of the Pomodoro Technique, Pomotasker
+                introduces features to enhance your work experience. It includes a customizable 25-minute timer, a todo
+                management system for organizing tasks, and the option to play your favorite music or lofi beats for a
+                personalized work environment. Designed to be accessible and responsive across all devices, Pomotasker
+                is not only effective but also free to use, making productivity convenient and enjoyable.</p>
+        </div>
+
+        <div class="info-content" style="float: left;">
+            <h3 class="info-title">How to Use Pomotasker?</h3>
+            <p class="info-para">Pomotasker is designed to help you manage your time effectively using the Pomodoro
+                Technique. Follow these steps to maximize your productivity:</p>
+            <ol>
+                <li><strong>Add a Task:</strong> Start by adding the task you want to work on in the "Add Task" section.
+                    Enter a brief description of the task in the input field.</li>
+
+                <li><strong>Set a Focus Song (Optional):</strong> If you prefer to listen to a specific focus song while
+                    working, you can add a YouTube link in the "Add Focus Song" input field.</li>
+
+                <li><strong>Estimate Pomodoros:</strong> Estimate the number of Pomodoros (work intervals) you
+                    anticipate for the task. This helps in planning your work sessions effectively.</li>
+
+                <li><strong>Add Todos (Optional):</strong> If your task involves multiple steps, you can add todos using
+                    the "Add Todo" section. Enter each todo and click the plus button to add it.</li>
+
+                <li><strong>Start the Timer:</strong> Click the "Start" button to initiate the 25-minute timer. Work on
+                    your task during this time with focus.</li>
+
+                <li><strong>Take Breaks:</strong> After each Pomodoro, Pomotasker will automatically notify you to take
+                    a 5-minute break. Utilize this time to relax and recharge.</li>
+
+                <li><strong>Track Todos:</strong> As you complete todos, use the todo management system to mark them as
+                    done. This keeps you organized and aware of your progress.</li>
+
+                <li><strong>Repeat or Finish:</strong> After completing four Pomodoros, consider taking a more extended
+                    break. Repeat the process for additional tasks or mark the task as done.</li>
+            </ol>
+
+            <p class="info-para">By following these steps, Pomotasker helps you maintain focus, manage your tasks
+                efficiently, and enhance overall productivity.</p>
+        </div>
+
+        <div class="info-content" style="float: left;">
+            <h3 class="info-title">Features of Pomotasker</h3>
+            <p class="info-para">
+                Pomotasker offers a range of features designed to enhance your productivity and focus during work
+                sessions. Here's what you can expect:
+
+            <ol>
+                <li><strong>25-Minute Timer:</strong> Pomotasker includes a built-in timer set for 25 minutes, followed
+                    by a 5-minute break. This proven Pomodoro technique helps you stay focused and maintain
+                    productivity.</li>
+
+                <li><strong>Todo Management:</strong> Organize your tasks effortlessly with Pomotasker's todo management
+                    system. Mark tasks as completed with a tick or remove them as needed, providing a streamlined
+                    approach to task tracking.</li>
+
+                <li><strong>Customizable Music:</strong> Enjoy a personalized working environment by playing your
+                    favorite songs or selecting from a variety of lofi beats. Pomotasker lets you create a soundtrack
+                    that suits your work style.</li>
+
+                <li><strong>Accessibility & Responsiveness:</strong> Pomotasker is designed to be easily accessible and
+                    responsive on all devices. Whether you're working on a desktop, tablet, or mobile phone, Pomotasker
+                    adapts to your screen size for a seamless user experience.</li>
+
+                <li><strong>Free to Use:</strong> Pomotasker is a cost-free tool, providing its valuable features
+                    without any subscription fees. Enhance your productivity without breaking the bank.</li>
+            </ol>
+            </p>
+        </div>
+    </div>
+    </div>
+
+    <div id="popup-timer" class="popup-timer" style="display: none;">
+        <div class="popup-content-timer">
+            <p id="popup-message-timer">Timer has ended!</p>
+            <div class="poptimer-container-button">
+                <button id="fineButton" class="popup-timer-button">Grind again 🚀</button>
+                <button id="breakButton" class="popup-timer-button">Take a Break ☕</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <label class="made-heart-footer">Made with <li class="fa-solid fa-heart"
+                        style="font-size: 20px; color: #ec7063;"></li> by <li class="fa-solid fa-robot"
+                        style="font-size: 20px; color: #ec7063;"></li> </label>
+                <ul class="footer-links">
+                    <label>
+                        <li class="fa-solid fa-clock" style="font-size: 20px; color: #ec7063;"
+                            id="pomotasker-footer-title"></li>
+                    </label>
+
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
