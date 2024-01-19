@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let timerDisplay = document.getElementById('timer-tag');
   let startButton = document.getElementById('start-btn');
   let addTaskButton = document.getElementById('add-task-btn');
-  let tomato = 0.1;
+  let tomato = 25;
   let timeLeft = tomato * 60;
   let timerRunning = false;
   let timerInterval;
