@@ -6,9 +6,9 @@
   <br>
   <img src="https://github.com/altamsh04/PomoTasker/assets/84860267/d218709f-6f54-4e11-a6dd-bd0d68f36f27" alt="PomoTasker Screenshot">
   <br>
-  <a href="https://altamsh04.github.io/PomoTasker/" target="_blank">
+<!--   <a href="https://altamsh04.github.io/PomoTasker/" target="_blank">
     <button>View live</button>
-  </a>
+  </a> -->
 </div>
 <br>
 Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned time management method developed by Francesco Cirillo. The Pomodoro Technique involves breaking your work into focused intervals, known as "pomodoros," lasting 25 minutes each, followed by a brief 5-minute break. After completing four consecutive pomodoros, a more extended break of 15 to 30 minutes is recommended. Pomotasker introduces additional features to enhance your work experience.
@@ -71,6 +71,13 @@ Pomotasker is designed to help you manage your time effectively using the Pomodo
 8. **Repeat or Finish:** After completing four Pomodoros, consider taking a more extended break. Repeat the process for additional tasks or mark the task as done.
 
 By following these steps, Pomotasker helps you maintain focus, manage your tasks efficiently, and enhance overall productivity.
+
+## How to Use
+1. Clone the repository to your local machine.
+   ```bash
+   git clone https://github.com/altamsh04/PomoTasker.git
+   ```
+2. Open the `index.html` file in your preferred web browser.
 
 ## License
 Pomotasker is released under the - [MIT LICENSE](LICENSE)
