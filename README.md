@@ -4,7 +4,7 @@
 <br>
 <div align='center'>
   <br>
-  <img src="https://github.com/altamsh04/PomoTasker/assets/84860267/d218709f-6f54-4e11-a6dd-bd0d68f36f27" alt="PomoTasker Screenshot">
+  <img src="https://github.com/altamsh04/PomoTasker/assets/84860267/3be87cde-e300-40f6-99f5-753ede9ce149" alt="PomoTasker Screenshot">
   <br>
 <!--   <a href="https://altamsh04.github.io/PomoTasker/" target="_blank">
     <button>View live</button>
