@@ -37,7 +37,7 @@ Pomotasker is a web-based tool that can be accessed directly through your web br
 ### Technologies Used
 - HTML
 - CSS
-- JavaScript
+- JavaScript (Sesstion storage)
 
 ### Usage
 1. Open your web browser and navigate to the [Pomotasker website](https://pomotasker.netlify.app/).
