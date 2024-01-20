@@ -4,11 +4,11 @@
 <br>
 <div align='center'>
   <br>
-  <img src="https://github.com/altamsh04/PomoTasker/assets/84860267/3be87cde-e300-40f6-99f5-753ede9ce149" alt="PomoTasker Screenshot">
+  <img src="https://github.com/altamsh04/PomoTasker/assets/84860267/8f352a59-d454-48f6-bd8d-a5c73d32a3d4" alt="PomoTasker Screenshot">
   <br>
-<!--   <a href="https://altamsh04.github.io/PomoTasker/" target="_blank">
+  <a href="https://pomotasker.netlify.app/" target="_blank">
     <button>View live</button>
-  </a> -->
+  </a>
 </div>
 <br>
 Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned time management method developed by Francesco Cirillo. The Pomodoro Technique involves breaking your work into focused intervals, known as "pomodoros," lasting 25 minutes each, followed by a brief 5-minute break. After completing four consecutive pomodoros, a more extended break of 15 to 30 minutes is recommended. Pomotasker introduces additional features to enhance your work experience.
@@ -40,7 +40,7 @@ Pomotasker is a web-based tool that can be accessed directly through your web br
 - JavaScript
 
 ### Usage
-1. Open your web browser and navigate to the [Pomotasker website](#).
+1. Open your web browser and navigate to the [Pomotasker website](https://pomotasker.netlify.app/).
 2. Add a new task using the "Add Task" section, providing a brief description of the task.
 3. Optionally, add a YouTube link to play a focus song during work.
 4. Estimate the number of Pomodoros (work intervals) needed for the task.
