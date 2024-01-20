@@ -11,10 +11,9 @@
   </a>
 </div>
 <br>
-Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned time management method developed by Francesco Cirillo. The Pomodoro Technique involves breaking your work into focused intervals, known as "pomodoros," lasting 25 minutes each, followed by a brief 5-minute break. After completing four consecutive pomodoros, a more extended break of 15 to 30 minutes is recommended. Pomotasker introduces additional features to enhance your work experience.
+Pomotasker is a productivity tool inspired by the Pomodoro Technique, a renowned time management method developed by Francesco Cirillo. The Pomodoro Technique involves breaking your work into focused intervals, known as "pomodoros," lasting 25 minutes each, followed by a brief 5-minute break. After completing four consecutive pomodoros, a more extended break of 15 to 30 minutes is recommended.
 
 ## Table of Contents
-
 - [Getting Started](#getting-started)
   - [Installation](#installation)
   - [Technology used](#technology-used)
