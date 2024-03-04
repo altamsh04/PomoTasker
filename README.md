@@ -36,7 +36,7 @@ Pomotasker is a web-based tool that can be accessed directly through your web br
 - JavaScript (Sesstion storage)
 
 ### Usage
-1. Open your web browser and navigate to the [Pomotasker website](https://pomotasker.netlify.app/).
+1. Open your web browser and navigate to the index file.
 2. Add a new task using the "Add Task" section, providing a brief description of the task.
 3. Optionally, add a YouTube link to play a focus song during work.
 4. Estimate the number of Pomodoros (work intervals) needed for the task.
